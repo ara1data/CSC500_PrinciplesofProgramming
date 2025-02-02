@@ -1,15 +1,16 @@
 # Module 1: Introduction to Programming Concepts
 ## 1.1 Computers and Programs (general)
-- Python focusses on learning the problem-solving strategies and techniques that a computer scientist uses
+- Python focuses on learning the problem-solving strategies and techniques that a computer scientist uses
 
 ## 1.2 Programming (general)
 ### Computer program basics
 Computer programs are abundant in many people's lives today, carrying out applications on smartphones, tablets, and laptops, powering businesses like Amazon and Netflix, helping cars drive and planes fly, and much more.<br/>
 A computer program consists of instructions executing one at a time. Basic instruction types are:
-- Input: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.
-- Process: A program performs computations on that data, such as adding two values like x + y.
-- Output: A program puts that data somewhere, such as to a file, screen, or network.
+- **Input**: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.
+- **Process**: A program performs computations on that data, such as adding two values like x + y.
+- **Output**: A program puts that data somewhere, such as to a file, screen, or network.
 Programs use variables to refer to data, like x, y, and z below. The name is due to a variable's value "varying" as a program assigns a variable like x with new values.
+
 ### Computational Thinking
 Mathematical thinking became increasingly important throughout the industrial age, enabling people to successfully live and work. In the information age, many people believe computational thinking, or creating a sequence of instructions to solve a problem, will become increasingly important for work and everyday life. A sequence of instructions that solves a problem is called an algorithm.
 
