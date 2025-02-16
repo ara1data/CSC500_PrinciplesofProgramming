@@ -1,4 +1,4 @@
-# Step 1: Item to Purchase Class
+# Step 1: ItemToPurchase Python Class
 '''
 Build the ItemToPurchase class with the following specifications:
 
@@ -26,7 +26,7 @@ class ItemToPurchase:
         print(f"{self.item_name} {self.item_quantity} @ ${self.item_price} = ${self.item_price * self.item_quantity}")
 
 
-# Step 2: Prompt User for Items
+# Step 2: Prompt User for Items Input
 '''
 In the main section of your code, prompt the user for two items and create two objects of the ItemToPurchase class.
 
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     item2.item_price = float(input("Enter the item price: "))
     item2.item_quantity = int(input("Enter the item quantity: "))
 
-# Step 3: Assignment Prompt
+# Step 3: Output Total Cost
 '''
 Add the costs of the two items together and output the total cost.
 

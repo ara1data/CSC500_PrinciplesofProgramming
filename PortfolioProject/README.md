@@ -1,23 +1,23 @@
 # Online Shopping Cart
 
-## From Milestone 1:
-### Step 1:
+## Milestone 1
+### Step 1: ItemToPurchase Python Class
 Build the ItemToPurchase class with the following specifications:
-- Attributes
-- item_name (string)
-- item_price (float)
-- item_quantity (int)
-- Default constructor
-- Initializes item's name = "none", item's price = 0, item's quantity = 0
-- Method
-- print_item_cost()
+- Attributes:
+  - item_name (string)
+  - item_price (float)
+  - item_quantity (int)
+  - Default constructor
+  - Initializes item's name = "none", item's price = 0, item's quantity = 0
+  - Method
+  - print_item_cost()
 <br/>
 Example of print_item_cost() output: Bottled Water 10 @ $1 = $10
 
-### Step 2:
+### Step 2: Prompt User for Item Input
 In the main section of your code, prompt the user for two items and create two objects of the ItemToPurchase class.
 
-#### Example:
+#### Example
 - Item 1
   - *Enter the item name*: Chocolate Chips
   - *Enter the item price*: 3
@@ -27,7 +27,7 @@ In the main section of your code, prompt the user for two items and create two o
   - *Enter the item price*: 1
   - *Enter the item quantity*: 10
 
-### Step 3:
+### Step 3: Output Total Cost
 Add the costs of the two items together and output the total cost.
 
 #### Example:
@@ -38,8 +38,8 @@ Add the costs of the two items together and output the total cost.
 <br/>
 Fix any issues from milestone 1 submission prior to submitting the Portfolio Project.
 
-## From Milestone 2:
-### Step 4:
+## Milestone 2
+### Step 4: ShoppingCart Python Class
 Build the ShoppingCart class with the following data attributes and related methods. Note: Some can be method stubs (empty methods) initially, to be completed in later steps.
 Parameterized constructor, which takes the customer name and date as parameters
 
@@ -82,7 +82,7 @@ John Doe's Shopping Cart - February 1, 2020
   - Chocolate Chips: Semi-sweet
   - Powerbeats 2 Headphones: Bluetooth headphones
 
-### Step 5:
+### Step 5: Print ShoppingCart Class
 In the main section of your code, implement the print_menu() function. print_menu() has a ShoppingCart parameter and outputs a menu of options to manipulate the shopping cart. Each option is represented by a single character. Build and output the menu within the function.
 
 If an invalid character is entered, continue to prompt for a valid choice. Hint: Implement Quit before implementing other options. Call print_menu() in the main() function. Continue to execute the menu until the user enters q to Quit.
@@ -97,7 +97,7 @@ If an invalid character is entered, continue to prompt for a valid choice. Hint:
 - q - Quit
 <br/>Choose an option:
 
-### Step 6:
+### Step 6: Output Shopping Cart Items
 Implement Output shopping cart menu option. Implement Output item's description menu option.
 
 #### Example of shopping cart menu option:
@@ -119,7 +119,7 @@ John Doe's Shopping Cart - February 1, 2020
 
 Fix any issues from milestone 2 submission prior to submitting the Portfolio Project.
 
-## Additional tasks for the final project submission:
+## Module 8 Final Submission: Additional tasks for the final project submission
 ### Step 7:
 In the main section of your code, prompt the user for a customer's name and today's date. Output the name and date. Create an object of type ShoppingCart.
 
