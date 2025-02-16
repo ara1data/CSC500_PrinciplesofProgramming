@@ -6,9 +6,11 @@ Attributes
 - item_name (string)
 - item_price (float)
 - item_quantity (int)
-- Default constructor
+
+Default constructor
 - Initializes item's name = "none", item's price = 0, item's quantity = 0
-- Method
+
+Method
 - print_item_cost()
 
 Example of print_item_cost() output:
