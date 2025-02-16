@@ -9,12 +9,56 @@ and the average rainfall per month for the entire period.
 '''
 # -------------------->
 
-# Ask User for Number of Years
+def calculate_average_rainfall():
+    """Calculates and displays the average rainfall over a period of years."""
 
+    # Ask user for number of years with error handling
+    try:
+        num_years = int(input("Enter the number of years: "))
+        if num_years <= 0:
+            raise ValueError("Number of years must be greater than zero.")
+    except ValueError as e:
+        print(f"Invalid input: {e}")
+        return
 
-# Loops
+    # Define variables to store total rainfall and total months
+    total_rainfall = 0
+    total_months = 0
 
-# Iterate for each year
-# Iterate for each month and ask user for monthly rainfall
+    # Iterate for each year
+    for year in range(num_years):
+        print(f"\nEnter rainfall data for year {year + 1}:")
+        for month in range(12):
+            while True:  # Input validation loop
+                # Iterate for each month and ask user for monthly rainfall
+                try:
+                    rainfall = float(input(f"Enter rainfall for month {month + 1} (in inches): "))
+                    if rainfall < 0:
+                        raise ValueError("Rainfall cannot be negative.")
+                    break  # Exit loop if input is valid
+                except ValueError as e:
+                    print(f"Invalid input: {e}")
 
-# Display the number of months, total inches of rainfall, and average rainfall per month over period
+            # Counters: update total rainfall and total months
+            total_rainfall += rainfall
+            total_months += 1
+
+    # Final calculations and output
+    if total_months > 0:
+        # Calculate average rainfall
+        average_rainfall = total_rainfall / total_months
+        
+        # Display results to users
+        print("\nRainfall Summary:")
+        # Display the number of months
+        print(f"Total Months: {total_months}")
+        # Display total inches of rainfall
+        print(f"Total Rainfall: {total_rainfall:.2f} inches")
+        # Display average rainfall per month over period
+        print(f"Average Rainfall per Month: {average_rainfall:.2f} inches")
+    else:
+        print("No rainfall data entered.")
+
+# Call the main function
+if __name__ == "__main__":
+    calculate_average_rainfall()
