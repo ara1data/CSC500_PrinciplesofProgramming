@@ -9,6 +9,7 @@ Write a program that uses nested loops to collect data and calculate the average
 - https://github.com/ara1data/CSC500_PrinciplesofProgramming/blob/main/Module_5/Module5_Part2_BookClubPoints.py
 <br/>
 The CSU Global Bookstore has a book club that awards points to its students based on the number of books purchased each month. The points are awarded as follows:
+
 - If a customer purchases 0 books, they earn 0 points.
 - If a customer purchases 2 books, they earn 5 points.
 - If a customer purchases 4 books, they earn 15 points.
