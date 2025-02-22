@@ -176,7 +176,12 @@ if __name__ == "__main__":
         elif choice == 'q':
             break
 
+# --------------------> Final Submission Parts <---------------------
+
+# --------------------> Part 7 <---------------------
+
 # Part 7 Assignment Prompt
+# Completed in Milestone 2 Part 4 and 6: Print Shopping Cart Menu Function
 '''
 In the main section of your code, prompt the user for a customer's name and today's date. 
 Output the name and date. Create an object of type ShoppingCart.
@@ -188,10 +193,28 @@ Customer name: John Doe
 Today's date: February 1, 2020
 '''
 
+### Part 4 of Milestone 2: ShoppingCart Python Class
+### parameterizes Customer Name and Current Date
+'''
+class ShoppingCart:
+    # Section 1: Parameterized constructor
+    def __init__(self, customer_name="none", current_date="February 22, 2025"):
+        self.customer_name = customer_name
+        self.current_date = current_date
+        self.cart_items = []
+'''
+### Part 6: When __main__ is executed, the following code prompts the user for their name and today's date.
+'''
+if __name__ == "__main__":
+    customer_name = input("Enter customer's name: ")
+    current_date = input("Enter today's date: ")
+    cart = ShoppingCart(customer_name, current_date)
+'''
 
+# --------------------> Part 8 <--------------------- 
 
-
-# Part 8 Assignment Prompt
+# Part 8 for Final Submission: Add Item to Cart Menu Option
+# Completed in Milestone 2 Part 4 and 6: Shopping Cart Python Class
 '''
 Implement Add item to cart menu option.
 
@@ -203,11 +226,29 @@ Enter the item price: 189
 Enter the item quantity: 2
 '''
 
+### Code Snippet from Part 4 of Milestone 2
+### Section 2: Add_item
+'''
+    def add_item(self, item):
+        self.cart_items.append(item)
+'''
+### Code Snippet from Part 6 of Milestone 2
+### When Menu Item 'a' is selected, the following code is executed.
+'''
+     if choice == 'a':
+            print("ADD ITEM TO CART")
+            item_name = input("Enter the item name: ")
+            item_description = input("Enter the item description: ")
+            item_price = float(input("Enter the item price: "))
+            item_quantity = int(input("Enter the item quantity: "))
+            new_item = ItemToPurchase(item_name, item_description, item_price, item_quantity)
+            cart.add_item(new_item)
+'''
 
-
-
+# --------------------> Part 9 <---------------------
 
 # Part 9 Assignment Prompt
+# Completed in Milestone 2 Part 4 and 6: Shopping Cart Python Class
 '''
 Implement remove item menu option.
 
@@ -216,9 +257,29 @@ REMOVE ITEM FROM CART
 Enter name of item to remove: Chocolate Chips
 '''
 
+### Code Snippet from Part 4 of Milestone 2
+### Section 3: Remove_item
+'''
+    def remove_item(self, item_name):
+        found = False
+        for item in self.cart_items:
+            if item.item_name == item_name:
+                self.cart_items.remove(item)
+                found = True
+                break
+        if not found:
+            print("Item not found in cart. Nothing removed.")
+'''
+### Code Snippet from Part 6 of Milestone 2
+### When Menu Item 'r' is selected, the following code is executed.
+'''
+        elif choice == 'r':
+            print("REMOVE ITEM FROM CART")
+            item_name = input("Enter name of item to remove: ")
+            cart.remove_item(item_name)
+'''
 
-
-
+# --------------------> Part 10 <---------------------
 
 # Part 10 Assignment Prompt
 '''
@@ -231,5 +292,31 @@ Enter the item name: Nike Romaleos
 Enter the new quantity: 3
 '''
 
-
-
+### Code Snippet from Part 4 of Milestone 2
+### Section 4: Modify_item
+'''
+    def modify_item(self, item_to_modify):
+        found = False
+        for item in self.cart_items:
+            if item.item_name == item_to_modify.item_name:
+                if item_to_modify.item_quantity != 0:
+                    item.item_quantity = item_to_modify.item_quantity
+                if item_to_modify.item_price != 0:
+                    item.item_price = item_to_modify.item_price
+                if item_to_modify.item_description != "none":
+                    item.item_description = item_to_modify.item_description
+                found = True
+                break
+        if not found:
+            print("Item not found in cart. Nothing modified.")
+'''
+### Code Snippet from Part 6 of Milestone 2
+### When Menu Item 'c' is selected, the following code is executed.
+'''
+        elif choice == 'c':
+            print("CHANGE ITEM QUANTITY")
+            item_name = input("Enter the item name: ")
+            quantity = int(input("Enter the new quantity: "))
+            modify_item = ItemToPurchase(item_name=item_name, item_quantity=quantity)
+            cart.modify_item(modify_item)
+'''
