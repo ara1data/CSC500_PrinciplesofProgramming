@@ -32,11 +32,12 @@ def print_menu():
     print("r - Get room number")
     print("i - Get instructor")
     print("m - Get meeting time")
+    print("a - Get all course information")
     print("q - Quit")
 
     while True:
         choice = input("Choose an option: ")
-        if choice in ('r', 'i', 'm', 'q'):
+        if choice in ('r', 'i', 'm', 'a', 'q'):
             return choice
         else:
             print("Invalid choice. Please try again.")
@@ -52,6 +53,7 @@ def get_course_info(course_number, rooms, instructors, times):
     else:
         print("Course number not found.")
 
+# Main function to run the program
 def main():
     """Main function to run the program."""
 
@@ -76,6 +78,9 @@ def main():
                 print(f"Meeting Time: {TIMES[course_number]}")
             else:
                 print("Course number not found.")
+        elif choice == 'a':
+            course_number = input("Enter course number: ").upper()
+            get_course_info(course_number, ROOMS, INSTRUCTORS, TIMES)
         elif choice == 'q':
             break
 
